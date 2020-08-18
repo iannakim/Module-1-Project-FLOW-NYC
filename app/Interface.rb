@@ -20,10 +20,15 @@ class Interface
     prompt.select ("") do |menu|
       menu.choice "Log in", -> {log_in_helper}
       menu.choice "Sign up", -> {create_user_helper}
-      menu.choice "What's Flow NYC?", -> {puts "Flow NYC is a virtual class booking app\nthat allows yogis to search for and book\nyoga classes at a click of a button."}
+      menu.choice "What's Flow NYC?", -> {about_page}
     end
   end
   
+  def about_page
+    puts "Flow NYC is a virtual class booking app\nthat allows yogis to search for and book\nyoga classes at a click of a button."
+    # add menu choice "Go Back"
+  end
+
   def log_in_helper
     #
     #
@@ -52,16 +57,19 @@ class Interface
         \n
         "
         prompt.select("What would you like to do?") do |menu|
-          menu.choice "_View My Upcoming Yoga Classes", -> {display_upcoming_class}
-          menu.choice "_Book a New Yoga Class", -> {book_new_class}
-          menu.choice "_View all locations", -> {all_location}
-          menu.choice "_Log out", -> {byebye}
+          menu.choice "View My Upcoming Yoga Classes", -> {display_upcoming_class}
+          menu.choice "Book a New Yoga Class", -> {book_new_class}
+          menu.choice "View all locations", -> {all_location}
+          menu.choice "Log out", -> {byebye}
         end
       end
       
       def display_upcoming_class
-       puts "#{self.student}"
-        self.student.yogaclasses
+      #  all the students reservations
+      #  if students reservation is false, put "You don't have any upcoming classes."
+
+      #add menu choice - Book a New Yoga Class
+      #add menu choice - Back to Main Menu
       end
 
 
@@ -71,12 +79,14 @@ class Interface
           menu.choice "Tribeca", -> {tribeca_location_selected}
           menu.choice "Upper East Side", -> {ues_location_selected}
           menu.choice "Upper West Side", -> {uws_location_selected}
-          menu.choice "Go Back", -> {self.main_menu}
+          menu.choice "Back to Main Menu", -> {self.main_menu}
         end
       end
 
 
       def all_location
+        puts "write all the locations  here"
+        #add menu choice - Back to Main Menu
       end
 
 
