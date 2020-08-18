@@ -15,7 +15,6 @@ ozzy = Instructor.create(name: "Ozzy", weekend?: false)
 spirit = Instructor.create(name: "Spirit", weekend?: true)
 hope = Instructor.create(name: "Hope", weekend?: false)
 
-
 ########################### Student ######################################## 
 elaine = Student.create(name: "Elaine", level: "advanced")
 coco = Student.create(name: "Coco", level: "beginner")
