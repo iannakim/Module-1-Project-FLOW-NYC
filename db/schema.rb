@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_154804) do
+ActiveRecord::Schema.define(version: 2020_08_19_130217) do
 
   create_table "instructors", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_154804) do
   create_table "reservations", force: :cascade do |t|
     t.integer "student_id"
     t.integer "yogaclass_id"
-    t.string "time"
   end
 
   create_table "students", force: :cascade do |t|
@@ -32,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_154804) do
     t.string "name"
     t.string "location"
     t.integer "instructor_id"
+    t.string "time"
   end
 
 end
